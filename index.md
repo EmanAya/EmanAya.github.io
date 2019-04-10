@@ -3,7 +3,7 @@ I am here!
 
 I am so excited about this!!
 
-Hello 
+Hello world!
 
 You can use the [editor on GitHub](https://github.com/EmanAya/EmanAya.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
