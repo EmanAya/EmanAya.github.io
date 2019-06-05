@@ -8,10 +8,24 @@
     public class MyClass 
     {
       public static void main(String[] args) 
-    {
-    int myNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; //Multiple variables - Alan//
-    System.out.println(myNum);
-    }
+      {
+       int myNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; //Multiple variables - Alan
+       System.out.println(myNum);
+       superMethod(myNum);
+      }
+    
+      public void superMethod(int num){ //Method creation - Aaron
+        int count = 0;
+        for(int i = 0; i > num.length; i++){ //for loop - Aaron
+          System.out.println(num);
+        }
+    
+        if(num[0] != 69){   //if-else - Aaron
+          System.out.println("This number sucks");
+        }else{
+          System.out.println("This number is just right");
+        }
+      }
     }
     
   </body>
