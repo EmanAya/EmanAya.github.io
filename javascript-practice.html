@@ -1,10 +1,90 @@
 <html>
   <head>
     <title>Javascript Practice</title>
+
+
+    <!-- Adding jquery. Something i saw being used in bootstrap (iman)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+      .iman{
+        background-color: aquamarine;
+      }
+    </style>
+    <!-- Adding script tag for my javascript code (iman)-->
+    <script>
+      // Iman's Javascript Section
+      /*
+        X Declare a variable and set its value.
+        X Use an array (AKA a table of variables stored as a set).
+        X Create a function.
+        X Throw in some conditional logic (AKA an if-then statement or a switch of some sort).
+        X Create a loop that runs multiple times until some end condition is met.
+        X Make some element execute the function when clicked on or is interacted with somehow by the user.
+      */
+
+      // https://www.w3schools.com/js/js_htmldom_document.asp
+      //var imanDivArray =  document.getElementsByClassName("iman") 
+
+      //Declaring functions:
+      // https://www.w3schools.com/js/js_function_definition.asp
+
+      //function for onclick
+      function wrapOnClick( elmnt ){  
+        //https://www.w3schools.com/jsref/event_onclick.asp      
+        //jquery parent returns array (which is weird) but i select first one.
+        // jquery google search is easy to use. i searched for "jquery get parent" and the first result was
+        // https://api.jquery.com/parent/
+        var div = $(elmnt).parent()[0];
+        
+        //Remember the inside
+        var val = div.innerHTML;        
+        //wrap it with an h1
+        $( div ).html("<h1>" + val + "</h1>");
+
+      }
+
+      var readyFunction = function( ) {
+          
+        // jquery takes any css selector
+        var titleDivArray = $( ".iman .title" )          
+        // Loop through title divs and add H1 to them
+        for ( i = 0 ; i < titleDivArray.length ; i=i+1 ){            
+          var div = titleDivArray[ i ];            
+          
+          if( ! $(div).hasClass("do-not-change") ){
+            //Remember the inside
+            var val = div.innerHTML;        
+            //wrap it with an h1
+            $( div ).html("<h1>" + val + "</h1>");
+          } 
+        } //end loop
+      }; //end readyFunction
+      
+      //Jquery ready function: https://api.jquery.com/ready/
+      // wait for the document to be "ready" before we can run our code.
+      // for the document, run my "readyFunction" when the page is ready.
+      // http://learn.jquery.com/using-jquery-core/document-ready/
+      $( document ).ready( readyFunction );
+      
+    </script>
   </head>
 
   <body>
-  
+    <div class="row">
+      <div class="col">
+        <h1>javascript practice</h1>
+        <div class="iman">
+          
+          <div class="title"> hi </div>
+          <div class="title">another title</div>
+          <div class="title do-not-change">Should not change - 
+            <button onclick="wrapOnClick(this)">Wrap Me with H1 baby</button></div>
+          </div>
+        <br/>
+        <div class="title">This is not selected because not a decendant of iman</div>
+      </div>
+    </div>
+   
     public class MyClass 
     {
       public static void main(String[] args) 
@@ -27,6 +107,7 @@
         }
       }
     }
+   
     
   </body>
 </html>
