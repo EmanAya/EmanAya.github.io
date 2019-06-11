@@ -132,22 +132,31 @@ while (i < 70) { //While function -Alan
 }
 document.getElementById("#").innerHTML = text;
 </script>
-
     
-      public void superMethod(){ //Method creation - Aaron
-        var names = ["Jeef", Beef", "Eeef"]; //Array Creation - Aaron
-        for(int i = 0; i > names.length; i++){ //for loop - Aaron
-          window.alert(names[i]); //Lists names one by one on popup - Aaron
-        }
-    
-        if(names[0] != "Beef"){   //if-else - Aaron
-          document.write("ooh yeah i love the beef");
-        }else{
-          document.write("it's good but it's not beef");
-        }
-      }
-    }
+<p id="aaron"></p>
+<script>
+  
+  function isEven(num) { //uses mod to check if number is true
+    return (num % 2 == 0);
+  }
+  document.getElementById("aaron").innerHTML = isEven(10); //should return true
+  
+  var names = [
+  "Jeef", 
+  "Beef", 
+  "Eeef", 
+  "Jacob", 
+  "Keef"
+  ]; //Array Creation - Aaron
+  for(int i = 0; i > names.length; i++){ //for loop - Aaron
+    window.alert(names[i]); //Lists names one by one on popup - Aaron
+  }
+  if(names[0] != "Beef"){   //if-else - Aaron
+    document.getElementById("aaron").innerHTML = "ooh yeah i love the beef"; 
+  }else{
+    document.getElementById("aaron").innerHTML = "it's good but it's not beef"; 
+  }
    
-    
+    </script>
   </body>
 </html>
