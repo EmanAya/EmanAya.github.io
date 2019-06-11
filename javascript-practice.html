@@ -88,23 +88,63 @@
    
     public class MyClass 
     {
-      public static void main(String[] args) 
-      {
-       int myNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; //Multiple variables - Alan
-       System.out.println(myNum);
-       superMethod(myNum);
-      }
+      
+<h2>JavaScript Multiplication Function</h2>
+<p>This code calls a function to perform a calculation, and returns the result:</p>
+<p id="func"></p>
+<script>
+function aFunction(p1, p2) {
+  return p1 * p2; //multiplication function -Alan
+}
+document.getElementById("func").innerHTML = aFunction(6, 9);
+</script>
     
-      public void superMethod(int num){ //Method creation - Aaron
-        int count = 0;
-        for(int i = 0; i > num.length; i++){ //for loop - Aaron
-          System.out.println(num);
+    <h2>JavaScript Car Array</h2>
+<p id="cars"></p> <!-- Car list Print -Alan/ -->
+<script>
+var cars = [ //Car Array -Alan
+  "AE86",
+  " GT86",
+  " MR2",
+  " Supra",
+  " R32",
+  " R34",
+  " RX-7",
+  " MX-5",
+  " Lancer Evo",
+  " NSX",
+  " Civic",
+  " Impreza",
+  " Cappuccino"
+];
+document.getElementById("cars").innerHTML = cars;
+</script>
+    
+    <h2>JavaScript Number Counter while</h2>
+
+<p id="#"></p> <!-- Number Print -Alan-->
+
+<script>
+var text = "";
+var i = 1;
+while (i < 70) { //While function -Alan
+  text += "<br>The current number is " + i;
+  i++;
+}
+document.getElementById("#").innerHTML = text;
+</script>
+
+    
+      public void superMethod(){ //Method creation - Aaron
+        var names = ["Jeef", Beef", "Eeef"]; //Array Creation - Aaron
+        for(int i = 0; i > names.length; i++){ //for loop - Aaron
+          window.alert(names[i]); //Lists names one by one on popup - Aaron
         }
     
-        if(num[0] != 69){   //if-else - Aaron
-          System.out.println("This number sucks");
+        if(names[0] != "Beef"){   //if-else - Aaron
+          document.write("ooh yeah i love the beef");
         }else{
-          System.out.println("This number is just right");
+          document.write("it's good but it's not beef");
         }
       }
     }
