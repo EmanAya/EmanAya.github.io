@@ -45,8 +45,9 @@
 
       var readyFunction = function( ) {
           
-        // jquery takes any css selector
-        var titleDivArray = $( ".iman .title" )          
+        // jquery takes any css selector and returns an array.
+        var titleDivArray = $( ".iman .title" );
+                  
         // Loop through title divs and add H1 to them
         for ( i = 0 ; i < titleDivArray.length ; i=i+1 ){            
           var div = titleDivArray[ i ];            
@@ -79,7 +80,7 @@
           <div class="title">another title</div>
           <div class="title do-not-change">Should not change - 
             <button onclick="wrapOnClick(this)">Wrap Me with H1 baby</button></div>
-          </div>
+        </div>
         <br/>
         <div class="title">This is not selected because not a decendant of iman</div>
       </div>
